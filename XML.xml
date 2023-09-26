@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Si no pongo nada al lado del producto obligatoriamente uno,
+     si pongo asterisco, infinitos, si pongo un mas de uno a infinitos, y interrogación sería 0,1.-->
+
+<!DOCTYPE catalogo [
+    <!ELEMENT catalogo (producto+)>
+    <!ELEMENT producto (nombre, precio, descripcion, caracteristicas)>
+    <!ELEMENT nombre (#PCDATA)>
+    <!ELEMENT precio (#PCDATA)>
+    <!ELEMENT descripcion (#PCDATA)>
+    <!ELEMENT caracteristicas (caracteristica)+>
+    <!ELEMENT caracteristica (#PCDATA)> <!-- #PCDATA significa texto-->
+
+]>
+<catalogo>
+
+    <producto>
+
+        <nombre>monitor</nombre>
+        <precio>100</precio>
+        <descripcion>60fps, negro, IPS</descripcion>
+        <caracteristicas>
+        <caracteristica nombre = "ratio">16:9</caracteristica>
+        <caracteristica nombre = "color">negro</caracteristica>
+        <caracteristica nombre = "pulgadas">24</caracteristica>
+        <caracteristica nombre = "HZ">144</caracteristica>
+           
+        </caracteristicas>
+    </producto>
+
+</catalogo>

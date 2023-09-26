@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- añadir que el plato puede ser vegano o no-->
+
+<!DOCTYPE carta [
+<!ELEMENT carta (plato+)>
+<!ELEMENT plato (nombreN,nombreVegano, descripccion, alergenos*, ingredientes+)>
+<!ELEMENT nombreN (#PCDATA)>
+<!ELEMENT nombreVegano EMPTY> <!-- EMTY para que se quede vacío y no se escriba nada-->
+<!ELEMENT descripccion (#PCDATA)>
+<!ELEMENT alergenos (#PCDATA)>
+<!ELEMENT ingredientes (ingrediente+)>
+<!ELEMENT ingrediente (nombreI,nombreA, cantidadI, UM)>
+<!ELEMENT nombreI (#PCDATA)>
+<!ELEMENT nombreA (#PCDATA)>
+<!ELEMENT cantidadI (#PCDATA)>
+<!ELEMENT UM (#PCDATA)>
+]>
+
+<carta>
+    <plato>
+
+        <nombreN>tarta</nombreN>
+        <nombreVegano></nombreVegano>
+
+        <descripccion>Una tarta de chocolate muy esponjosa y deliciosa</descripccion>
+
+        <alergenos></alergenos>
+
+        <ingredientes>
+
+            <ingrediente>
+                <nombreI>leche</nombreI>
+                <nombreA>leche de avena</nombreA>
+                <cantidadI>120</cantidadI>
+                <UM>ml</UM>
+                
+            </ingrediente>
+
+        </ingredientes>
+    </plato>
+</carta>

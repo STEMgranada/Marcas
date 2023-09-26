@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE biblioteca[
+
+    <!ELEMENT biblioteca (producto+)>
+    <!ELEMENT producto (nombre, autor*, fecha, caracteristicas)>
+    <!ELEMENT nombre (#PCDATA)>
+    <!ELEMENT autor (#PCDATA)>
+    <!ELEMENT fecha (dia, mes, año)?>
+    <!ELEMENT dia (#PCDATA)>
+    <!ELEMENT mes (#PCDATA)>
+    <!ELEMENT año (#PCDATA)>
+    <!ELEMENT caracteristicas (caracteristica+)>
+    <!ELEMENT caracteristica (#PCDATA)>
+    ]>
+
+<biblioteca>
+<producto>
+        <nombre>Fundacion</nombre>
+
+        <autor>Elisa</autor>
+
+        <fecha> 
+            <dia>20</dia>
+            <mes>09</mes>
+            <año>2022</año>
+        </fecha>
+
+    <caracteristicas>
+    
+            <caracteristica nombre = "pagninas">160</caracteristica>
+            <caracteristica nombre = "color">negro</caracteristica>
+            <caracteristica nombre = "precio">50</caracteristica>
+            <caracteristica nombre = "genero">historia</caracteristica>
+            
+    </caracteristicas>
+        
+        
+</producto>
+</biblioteca>
