@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Crea un fichero XML con DTD integrado que cumpla los siguientes requisitos
+1. Elemento raíz videojuegos
+2. videojuegos está compuesto de elementos videojuego
+3. videojuego está compuesto por nombre, descripción, fecha de lanzamiento (dia, mes y año), nombre equipo desarrollo y nombre de empresa distribuidora.
+4. Además, videojuego tiene una lista géneros
+5. géneros debe tener uno o más elementos género.
+6. género está compuesto por nombre y descripción
+7. La descripción de los géneros es opcional
+8. La fecha de lanzamiento puede tener solo año (sin día ni mes)
+9. Debe haber al menos un videojuego -->
+
+
+<!DOCTYPE videojuegos [
+<!ELEMENT videojuegos (videojuego+)>
+<!ELEMENT videojuego (nombre, descripccion, fecha?, nombreEquipo,nombreEmpresa,genero+)>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT fechas (fecha?)>
+<!ELEMENT fecha (dia,mes,año)>
+<!ELEMENT dia (#PCDATA)>
+<!ELEMENT mes (#PCDATA)>
+<!ELEMENT año (#PCDATA)>
+<!ELEMENT descripccion (#PCDATA)>
+<!ELEMENT nombreEquipo (#PCDATA)>
+<!ELEMENT nombreEmpresa (#PCDATA)>
+<!ELEMENT generos (genero+)>
+<!ELEMENT genero (nombreG,descripccionG?)> <!-- Para hacer que algo sea opcional se pone una '?' para decir si lo puedes poner o no-->
+<!ELEMENT nombreG (#PCDATA)>
+<!ELEMENT descripccionG (#PCDATA)>
+]>
+
+<videojuegos>
+
+    <videojuego>
+        <nombre>Dark Souls</nombre>
+        <descripccion>Esto es un juego de niveles donde sufres mucho</descripccion>
+        <fecha>
+            <dia>10</dia>
+            <mes>08</mes>
+            <año>2012</año>
+        </fecha>
+        <nombreEquipo>FromSoftware</nombreEquipo>
+        <nombreEmpresa>Sony</nombreEmpresa>
+        <genero>
+            <nombreG>accion, aventura, fantasia oscura</nombreG>
+            <descripccionG>es un videojuego de rol-accion</descripccionG>
+        </genero>
+    </videojuego>
+
+</videojuegos>

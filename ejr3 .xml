@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Crea una DTD para un documento XML que represente una lista de productos. La DTD debe definir los siguientes elementos:
+producto: El elemento raíz del documento.
+nombre: El nombre del producto.
+precio: El precio del producto.
+cantidad: La cantidad de productos en stock-->
+
+<!DOCTYPE producto[
+<!ELEMENT producto (elemento)>
+<!ELEMENT elemento (nombre, precio, cantidad+)>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT precio (#PCDATA)>
+<!ELEMENT cantidad (#PCDATA)>
+]>
+
+<producto>
+<elemento>
+    <nombre>Ordenador</nombre>
+    <precio>1500</precio>
+    <cantidad>uno</cantidad>
+</elemento>
+</producto>

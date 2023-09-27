@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Crea un fichero XML con DTD integrado que cumpla los siguientes requisitos
+1. Elemento raíz marcadores
+2. marcadores está compuesto de elementos página
+3. página está compuesto por nombre, descripción y url.
+4. la descripción de las páginas es opcional
+5. Puede no haber páginas en los marcadores -->
+
+<!DOCTYPE marcadores [
+<!ELEMENT marcadores (pagina?)>
+<!ELEMENT pagina (nombre, descripcion?, url)>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT descripcion (#PCDATA)>
+<!ELEMENT url (#PCDATA)>
+]>
+
+<marcadores>
+<pagina>
+    <nombre>Twitter</nombre>
+    <descripcion></descripcion>
+    <url>https://twitter.com/i/flow/login?</url>
+</pagina>
+</marcadores>
