@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE listacompras[
+<!ELEMENT listacompras (venta+)>
+<!ELEMENT venta (ventaCredito, ventaInmediata)>
+<!ELEMENT ventaCredito (fechaFinPago?,cantidad)>
+<!ELEMENT ventaInmediata (Divisa,cantidadI)>
+<!ELEMENT Divisa (#PCDATA)>
+<!ELEMENT cantidadI (#PCDATA)>
+<!ELEMENT cantidad (#PCDATA)>
+<!ELEMENT fechaFinPago (#PCDATA)>
+]>
+
+<listacompras>
+    <venta>
+        <ventaCredito>
+            <fechaFinPago></fechaFinPago>
+            <cantidad>8</cantidad>
+        </ventaCredito>
+        <ventaInmediata>
+            <Divisa>7</Divisa>
+            <cantidadI>66</cantidadI>
+        </ventaInmediata>
+    </venta>
+</listacompras>
