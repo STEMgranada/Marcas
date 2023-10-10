@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="videojuegos">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="videojuego" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+                <xs:element name="nombre" type="xs:string"/>
+                <xs:element name="descripcion" type="xs:string"/>
+                <xs:element name="fechaDeLanzamiento">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="dia" type="xs:integer" minOccurs="0"/> 
+                            <xs:element name="mes" type="xs:integer" minOccurs="0"/>
+                            <xs:element name="anio" type="xs:integer"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name= "nombreEqupoDesarrollo" type="xs:string"/> 
+                <xs:element name= "distribuidor" type="xs:string"/> 
+                <xs:element name= "generos"> 
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="nombreG" type="xs:string"/>
+                        <xs:element name="descripcionG" type="xs:string"/> 
+                    </xs:sequence>
+                </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

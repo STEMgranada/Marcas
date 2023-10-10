@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Crea un fichero XML con XSD que cumpla los siguientes requisitos:
+Elemento raíz videojuegos
+videojuegos está compuesto de elementos videojuego
+videojuego está compuesto por nombre, descripción, fecha de lanzamiento (día, mes y año), nombre equipo desarrollo y nombre de empresa distribuidora.
+Además, videojuego tiene una lista géneros
+géneros debe tener uno o más elementos género.
+género está compuesto por nombre y descripción
+La descripción de los géneros es opcional
+La fecha de lanzamiento puede tener solo año (sin día ni mes)
+Debe haber al menos un videojuego-->
+
+<videojuegos xmlns:xs="http://www.w3.org/2001/XMLSchema-instance"
+xs:noNamespaceSchemaLocation="XSD.2.xsd">
+   <videojuego>
+        <nombre>Pikmin4</nombre>
+        <descripcion>Perro ayuda a Pikmins.</descripcion>
+        <fechaDeLanzamiento>
+            <dia>1</dia>
+            <mes>12</mes>
+            <anio>2023</anio>
+        </fechaDeLanzamiento>
+        <nombreEqupoDesarrollo>Nintendo</nombreEqupoDesarrollo>
+        <distribuidor></distribuidor>
+        <generos>
+            <nombreG>Aventura</nombreG>
+            <descripcionG>kbxhjxcb</descripcionG>
+            
+        </generos>
+  </videojuego>
+  <videojuego>
+    <nombre>Pikmin3</nombre>
+    <descripcion>Perro ayuda a Pikmins.</descripcion>
+    <fechaDeLanzamiento>
+        <dia>5</dia>
+        <mes>6</mes>
+        <anio>2017</anio>
+    </fechaDeLanzamiento>
+    <nombreEqupoDesarrollo>Nintendo</nombreEqupoDesarrollo>
+    <distribuidor></distribuidor>
+    <generos>
+        <nombreG>Fantasia,Puzzles</nombreG>
+        <descripcionG>jghvhsvsdv</descripcionG>
+    </generos>
+</videojuego>
+</videojuegos>
