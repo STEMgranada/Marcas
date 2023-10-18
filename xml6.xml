@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Un instituto necesita registrar los cursos y alumnos que estudian en él 
+y necesita comprobar los documentos XML de los programas que utiliza:
+Tiene que haber un elemento raíz listacursos. Tiene que haber uno o más 
+cursos.
+Un curso tiene uno o más alumnos (máximo 20)
+Todo alumno tiene un DNI, un nombre y un apellido, puede que tenga 
+segundo apellido o no.
+Un alumno escoge una lista de asignaturas donde habrá una o más 
+asignaturas (máximo 6). 
+Toda asignatura tiene un nombre (Solo se permiten las asignaturas 
+Programación, Bases de Datos y FOL), un atributo código,
+ un profesor y las horas semanales (un número entero entre 1 y 10).
+Un profesor tiene un NRP (Número de Registro Personal), un nombre 
+y un apellido (también puede tener o no un segundo apellido).-->
+
+<listaCursos xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" xs:noNamespaceSchemaLocation="xml6.xsd">
+    <curso>
+        <listaAlumnos>
+            <alumno>
+                <DNI></DNI>
+                <nombre></nombre>
+                <primerApellido></primerApellido>
+                <segundoApellido></segundoApellido>
+                <listaAsignaturas>
+                    <asignatura codigo="1234">
+                        <nombre>Programacion</nombre>
+                        <horasSemanales>9</horasSemanales>
+                        <profesor>
+                            <NRP></NRP>
+                            <nombre></nombre>
+                            <primerApellido></primerApellido>
+                            <segundoApellido></segundoApellido>
+                        </profesor>
+                    </asignatura>
+                </listaAsignaturas>
+            </alumno>
+        </listaAlumnos>
+    </curso>
+</listaCursos>

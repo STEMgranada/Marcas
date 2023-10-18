@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<xs:element name="listaCursos">
+    <xs:complexType>
+        <xs:sequence>
+            <xs:element name="curso" minOccurs = "1" maxOccurs = "unbounded">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="listaAlumnos">
+                            <xs:complexType>
+                                <xs:sequence>
+                                    <xs:element name="alumno" minOccurs = "1" maxOccurs = "20">
+                                        <xs:complexType>
+                                            <xs:sequence>
+                                                <xs:element name="DNI" type="xs:string"></xs:element>
+                                                <xs:element name="nombre" type="xs:string"></xs:element>
+                                                <xs:element name="primerApellido" type="xs:string"></xs:element>
+                                                <xs:element name="segundoApellido" type="xs:string" minOccurs = "0" maxOccurs = "1"></xs:element>
+                                                <xs:element name="listaAsignaturas">
+                                                    <xs:complexType>
+                                                        <xs:sequence>
+                                                            <xs:element name="asignatura" minOccurs = "1" maxOccurs = "6">
+                                                                <xs:complexType>
+                                                                    <xs:sequence>
+
+                                                                        <xs:element name="nombre">
+                                                                            <xs:simpleType>
+                                                                                <xs:restriction base="xs:string">
+                                                                                    <xs:enumeration value="Programacion"/>
+                                                                                    <xs:enumeration value="Bases de Datos"/>
+                                                                                    <xs:enumeration value="FOL"/>
+                                                                                </xs:restriction>
+                                                                            </xs:simpleType>
+                                                                        </xs:element>
+
+                                                                        <xs:element name="horasSemanales">
+                                                                            <xs:simpleType>
+                                                                                <xs:restriction base="xs:integer">
+                                                                                    <xs:minInclusive value="1"></xs:minInclusive>
+                                                                                    <xs:maxInclusive value="10"></xs:maxInclusive>
+                                                                                </xs:restriction>
+                                                                            </xs:simpleType>
+                                                                        </xs:element>
+
+                                                                        <xs:element name="profesor">
+                                                                            <xs:complexType>
+                                                                                <xs:sequence>
+                                                                                    <xs:element name="NRP" type="xs:string"></xs:element>
+                                                                                    <xs:element name="nombre" type="xs:string"></xs:element>
+                                                                                    <xs:element name="primerApellido" type="xs:string"></xs:element>
+                                                                                    <xs:element name="segundoApellido" type="xs:string" minOccurs = "0" maxOccurs = "1"></xs:element>
+                                                                                </xs:sequence>
+                                                                            </xs:complexType>
+                                                                        </xs:element>
+                                                                    </xs:sequence>
+                                                                    <xs:attribute name="codigo" type="xs:string"/>
+                                                                </xs:complexType>
+                                                            </xs:element>
+                                                        </xs:sequence>
+                                                    </xs:complexType>
+                                                </xs:element>
+                                            </xs:sequence>
+                                        </xs:complexType>
+                                    </xs:element>
+                                </xs:sequence>
+                            </xs:complexType>
+                        </xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+</xs:element>
+</xs:schema>

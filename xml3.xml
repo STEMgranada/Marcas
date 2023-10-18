@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- En un departamento se ha decidido la siguiente estructura para ficheros de datos que se tengan que mover de unos software a otros.
+La raíz debe ser el elemento <listacompras>
+Dentro de <listacompras> debe haber uno o más elementos <venta>
+Una venta puede llevar dentro uno de dos: <ventaacredito> o <ventainmediata>
+Un elemento <ventaacredito> consta de : un elemento <fechafinpago> que es optativo y un elemento <cantidad> que es obligatorio.
+Un elemento <ventainmediata> lleva dentro dos cosas: un elemento <cantidad> que es obligatorio y un elemento <divisa> que también es obligatorio-->
+
+<listaCompras xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" xs:noNamespaceSchemaLocation="xsd3.xsd">
+    <venta>
+        <ventaCredito>
+            <fechaFinPago></fechaFinPago>
+            <cantidad>14</cantidad>
+        </ventaCredito>
+        <ventaInmediata>
+            <cantidadI>14</cantidadI>
+            <divisa>7</divisa>
+        </ventaInmediata>
+    </venta>
+</listaCompras>

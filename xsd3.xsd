@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<xs:element name="listaCompras">
+    <xs:complexType>
+        <xs:sequence>
+            <xs:element name="venta" maxOccurs ="unbounded">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="ventaCredito">
+                            <xs:complexType>
+                                <xs:sequence>
+                                 <xs:element name="fechaFinPago" minOccurs ="0" maxOccurs ="1" type="xs:string"></xs:element>
+                                    <xs:element name="cantidad" type="xs:integer"></xs:element>
+                                </xs:sequence>
+                            </xs:complexType>
+                        </xs:element>
+                        <xs:element name="ventaInmediata">
+                            <xs:complexType>
+                            <xs:sequence>
+                                <xs:element name="cantidadI" type="xs:integer"></xs:element>
+                                <xs:element name="divisa" type="xs:integer"></xs:element>
+                            </xs:sequence>
+                        </xs:complexType>
+                        </xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+</xs:element>
+</xs:schema>
